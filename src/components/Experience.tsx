@@ -1,0 +1,77 @@
+import { Building, Calendar, MapPin } from 'lucide-react';
+import { portfolioData } from '@/data/portfolio';
+import { translations, Language } from '@/lib/i18n';
+
+interface ExperienceProps {
+  language: Language;
+}
+
+export default function Experience({ language }: ExperienceProps) {
+  const t = translations[language];
+  const { experience } = portfolioData;
+
+  return (
+    <section id="experience" className="py-20">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            {t.experience.title}
+          </h2>
+
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-accent transform md:-translate-x-0.5" />
+
+            <div className="space-y-12">
+              {experience.map((exp, index) => (
+                <div
+                  key={index}
+                  className={`relative flex items-center ${
+                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
+                >
+                  {/* Timeline dot */}
+                  <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-primary rounded-full transform md:-translate-x-2 border-4 border-background z-10" />
+
+                  {/* Content */}
+                  <div className={`ml-12 md:ml-0 md:w-1/2 ${
+                    index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'
+                  }`}>
+                    <div className="glass-card p-6 group hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+                      <div className="flex items-center mb-3">
+                        <Building className="h-5 w-5 text-primary mr-2" />
+                        <h3 className="text-xl font-bold text-foreground">{exp.company}</h3>
+                      </div>
+                      
+                      <h4 className="text-lg font-semibold text-primary mb-3">{exp.role}</h4>
+                      
+                      <div className="flex flex-wrap gap-4 mb-4 text-sm text-muted-foreground">
+                        <div className="flex items-center">
+                          <Calendar className="h-4 w-4 mr-1" />
+                          {exp.period}
+                        </div>
+                        <div className="flex items-center">
+                          <MapPin className="h-4 w-4 mr-1" />
+                          {exp.location}
+                        </div>
+                      </div>
+
+                      <ul className="space-y-2">
+                        {exp.achievements.map((achievement, achievementIndex) => (
+                          <li key={achievementIndex} className="flex items-start">
+                            <span className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0" />
+                            <span className="text-foreground/80">{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
