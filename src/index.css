@@ -16,14 +16,14 @@
     --card-foreground: 240 10% 15%;
     --card-border: 0 0% 100%;
 
-    /* Darker Purple palette */
-    --primary: 251 91% 35%; /* Much darker purple */
-    --primary-hover: 251 91% 40%; /* Slightly lighter on hover */
+    /* Lighter Purple palette for better contrast */
+    --primary: 262 67% 58%; /* Lighter purple */
+    --primary-hover: 262 67% 65%; /* Even lighter on hover */
     --primary-foreground: 0 0% 100%;
 
-    /* Darker Accent purple */
-    --accent: 251 91% 45%; /* Darker than original accent */
-    --accent-foreground: 0 0% 100%;
+    /* Lighter Accent purple */
+    --accent: 262 85% 70%; /* Lighter accent */
+    --accent-foreground: 240 10% 15%;
 
     /* Status colors */
     --success: 158 73% 43%; /* #10B981 */
@@ -71,12 +71,12 @@
     --card-foreground: 0 0% 98%;
     --card-border: 0 0% 100%;
 
-    /* Darker Purple palette (same in dark) */
-    --primary: 251 91% 35%;
-    --primary-hover: 251 91% 40%;
+    /* Lighter Purple palette (same in dark) */
+    --primary: 262 67% 58%;
+    --primary-hover: 262 67% 65%;
     --primary-foreground: 0 0% 100%;
 
-    --accent: 251 91% 45%;
+    --accent: 262 85% 70%;
     --accent-foreground: 0 0% 100%;
 
     --success: 158 73% 43%;

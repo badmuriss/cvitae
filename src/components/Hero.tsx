@@ -33,7 +33,7 @@ export default function Hero({ language }: HeroProps) {
           {/* Profile image placeholder */}
           <div className="w-32 h-32 mx-auto mb-8 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-2xl shadow-primary/20 overflow-hidden">
             <img 
-              src="https://via.placeholder.com/128x128/3B0764/FFFFFF?text=MM" 
+              src="https://via.placeholder.com/128x128/7C3AED/FFFFFF?text=MM" 
               alt="Murilo Moura Profile" 
               className="w-full h-full object-cover"
             />
