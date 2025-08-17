@@ -9,7 +9,7 @@ interface NavigationProps {
 }
 
 export default function Navigation({ language, onLanguageChange }: NavigationProps) {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [scrolled, setScrolled] = useState(false);
   const t = translations[language];
 
@@ -18,6 +18,11 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
     if (savedTheme) {
       setTheme(savedTheme);
       document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      // Default to dark mode
+      setTheme('dark');
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
     }
   }, []);
 
@@ -44,15 +49,14 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
     }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-bold text-xl text-primary">MM</div>
+          <span className="text-xl font-bold text-foreground">Murilo Moura</span>
           
           <div className="hidden md:flex items-center space-x-8">
             {[
               { key: 'about', id: 'about' },
               { key: 'skills', id: 'skills' },
               { key: 'experience', id: 'experience' },
-              { key: 'projects', id: 'projects' },
-              { key: 'contact', id: 'contact' }
+              { key: 'projects', id: 'projects' }
             ].map(({ key, id }) => (
               <button
                 key={key}

@@ -31,8 +31,12 @@ export default function Hero({ language }: HeroProps) {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Profile image placeholder */}
-          <div className="w-32 h-32 mx-auto mb-8 glass-card rounded-full flex items-center justify-center text-4xl font-bold text-primary">
-            {personal.name.split(' ').map(n => n[0]).join('')}
+          <div className="w-32 h-32 mx-auto mb-8 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-2xl shadow-primary/20 overflow-hidden">
+            <img 
+              src="https://via.placeholder.com/128x128/3B0764/FFFFFF?text=MM" 
+              alt="Murilo Moura Profile" 
+              className="w-full h-full object-cover"
+            />
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">

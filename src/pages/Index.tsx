@@ -20,7 +20,6 @@ const Index = () => {
       <Skills language={language} />
       <Experience language={language} />
       <Projects language={language} />
-      <Contact language={language} />
       <Footer language={language} />
     </div>
   );

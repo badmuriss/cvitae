@@ -32,14 +32,23 @@ export default function Projects({ language }: ProjectsProps) {
 
   const ProjectCard = ({ project }: { project: Project }) => (
     <div className="glass-card p-6 group">
-      <div className="flex justify-between items-start mb-4">
-        <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-          {project.name}
-        </h3>
-        <span className="text-sm text-muted-foreground bg-muted px-2 py-1 rounded">
-          {project.year}
-        </span>
-      </div>
+      <div className="flex flex-col h-full">
+        {/* Project image placeholder */}
+        <div className="w-full h-48 mb-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center overflow-hidden">
+          <img 
+            src={`https://via.placeholder.com/400x200/3B0764/FFFFFF?text=${encodeURIComponent(project.name)}`}
+            alt={`${project.name} preview`}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="flex justify-between items-start mb-4">
+          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+            {project.name}
+          </h3>
+          <span className="text-sm text-muted-foreground bg-muted px-2 py-1 rounded">
+            {project.year}
+          </span>
+        </div>
       
       <p className="text-foreground/80 mb-4 leading-relaxed">
         {project.description}
@@ -57,32 +66,33 @@ export default function Projects({ language }: ProjectsProps) {
         ))}
       </div>
       
-      <div className="flex gap-3">
-        <Button
-          variant="outline"
-          size="sm"
-          asChild
-          className="group/btn"
-        >
-          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-            <Github className="mr-2 h-4 w-4 group-hover/btn:scale-110 transition-transform" />
-            {t.projects.viewGithub}
-          </a>
-        </Button>
-        
-        {project.liveUrl && (
+        <div className="flex gap-3">
           <Button
-            variant="default"
+            variant="outline"
             size="sm"
             asChild
             className="group/btn"
           >
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="mr-2 h-4 w-4 group-hover/btn:scale-110 transition-transform" />
-              {t.projects.viewLive}
+            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+              <Github className="mr-2 h-4 w-4 group-hover/btn:scale-110 transition-transform" />
+              {t.projects.viewGithub}
             </a>
           </Button>
-        )}
+          
+          {project.liveUrl && (
+            <Button
+              variant="default"
+              size="sm"
+              asChild
+              className="group/btn"
+            >
+              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="mr-2 h-4 w-4 group-hover/btn:scale-110 transition-transform" />
+                {t.projects.viewLive}
+              </a>
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   );

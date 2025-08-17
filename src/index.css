@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Portfolio Design System - Purple-first with glassmorphism */
+/* Portfolio Design System - Dark purple-first with glassmorphism */
 
 @layer base {
   :root {
@@ -16,14 +16,14 @@
     --card-foreground: 240 10% 15%;
     --card-border: 0 0% 100%;
 
-    /* Purple palette */
-    --primary: 257 61% 52%; /* #6D28D9 */
-    --primary-hover: 262 67% 58%; /* #7C3AED */
+    /* Darker Purple palette */
+    --primary: 251 91% 35%; /* Much darker purple */
+    --primary-hover: 251 91% 40%; /* Slightly lighter on hover */
     --primary-foreground: 0 0% 100%;
 
-    /* Accent purple */
-    --accent: 262 85% 75%; /* #A78BFA */
-    --accent-foreground: 240 10% 15%;
+    /* Darker Accent purple */
+    --accent: 251 91% 45%; /* Darker than original accent */
+    --accent-foreground: 0 0% 100%;
 
     /* Status colors */
     --success: 158 73% 43%; /* #10B981 */
@@ -71,13 +71,13 @@
     --card-foreground: 0 0% 98%;
     --card-border: 0 0% 100%;
 
-    /* Purple palette (same in dark) */
-    --primary: 257 61% 52%;
-    --primary-hover: 262 67% 58%;
+    /* Darker Purple palette (same in dark) */
+    --primary: 251 91% 35%;
+    --primary-hover: 251 91% 40%;
     --primary-foreground: 0 0% 100%;
 
-    --accent: 262 85% 75%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 251 91% 45%;
+    --accent-foreground: 0 0% 100%;
 
     --success: 158 73% 43%;
     --warning: 38 92% 50%;
