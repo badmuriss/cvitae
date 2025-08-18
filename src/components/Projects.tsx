@@ -30,13 +30,17 @@ export default function Projects({ language }: ProjectsProps) {
     return matchesSearch && matchesTech;
   });
 
-  const ProjectCard = ({ project }: { project: Project }) => (
+  const ProjectCard = ({ project }: { project: Project }) => {
+    const projectKey = project.name.toLowerCase();
+    const translatedDescription = t.projects.list[projectKey as keyof typeof t.projects.list]?.description || project.description;
+    
+    return (
     <div className="glass-card p-6 group h-[500px]">
       <div className="flex flex-col h-full">
         {/* Project image placeholder */}
         <div className="w-full h-48 mb-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center overflow-hidden">
           <img 
-            src={`https://via.placeholder.com/400x200/7C3AED/FFFFFF?text=${encodeURIComponent(project.name)}`}
+            src={`/projects/${projectKey}.png`}
             alt={`${project.name} preview`}
             className="w-full h-full object-cover"
           />
@@ -51,7 +55,7 @@ export default function Projects({ language }: ProjectsProps) {
         </div>
       
       <p className="text-foreground/80 mb-4 leading-relaxed flex-grow">
-        {project.description}
+        {translatedDescription}
       </p>
       
       <div className="flex flex-wrap gap-2 mb-6">
@@ -95,7 +99,8 @@ export default function Projects({ language }: ProjectsProps) {
         </div>
       </div>
     </div>
-  );
+    );
+  };
 
   return (
     <section id="projects" className="py-20 bg-muted/30">
@@ -140,10 +145,10 @@ export default function Projects({ language }: ProjectsProps) {
             {/* Active filters */}
             {(searchTerm || selectedTech) && (
               <div className="flex items-center gap-2 mt-4 pt-4 border-t border-border">
-                <span className="text-sm text-muted-foreground">Active filters:</span>
+                <span className="text-sm text-muted-foreground">{t.projects.activeFilters}</span>
                 {searchTerm && (
                   <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                    Search: "{searchTerm}"
+                    {t.projects.search}: "{searchTerm}"
                     <button
                       onClick={() => setSearchTerm('')}
                       className="ml-2 hover:text-primary-hover"
@@ -154,7 +159,7 @@ export default function Projects({ language }: ProjectsProps) {
                 )}
                 {selectedTech && (
                   <span className="px-3 py-1 bg-accent/10 text-accent-foreground rounded-full text-sm">
-                    Tech: {selectedTech}
+                    {t.projects.tech}: {selectedTech}
                     <button
                       onClick={() => setSelectedTech('')}
                       className="ml-2 hover:text-accent"
@@ -183,8 +188,8 @@ export default function Projects({ language }: ProjectsProps) {
           {filteredProjects.length === 0 && (
             <div className="text-center py-12">
               <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">No projects found</h3>
-              <p className="text-muted-foreground">Try adjusting your search criteria</p>
+              <h3 className="text-xl font-semibold text-foreground mb-2">{t.projects.noProjects}</h3>
+              <p className="text-muted-foreground">{t.projects.adjustCriteria}</p>
             </div>
           )}
         </div>

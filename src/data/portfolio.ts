@@ -3,53 +3,65 @@ import { PortfolioData } from '@/types/portfolio';
 export const portfolioData: PortfolioData = {
   personal: {
     name: "Murilo Moura",
-    role: "Full-Stack Developer",
-    tagline: "Building scalable solutions with modern technologies",
-    bio: "Passionate full-stack developer with expertise in Java, Spring Boot, React, and cloud technologies. I create robust, user-focused applications with clean code and modern practices.",
-    location: "Brazil",
+    role: "Software Developer",
+    tagline: "Automating enterprise workflows and building full-stack applications",
+    bio: "Software developer and Information Systems student at FIAP with proven success automating enterprise workflows and building full-stack applications. Expert in Java/Spring Boot, JavaScript/React, Azure Logic Apps and Docker. Delivered solutions that cut manual effort by 60% and sustained a 97% CSAT. Strong collaborator, adept at translating complex business requirements into secure, maintainable, high-performance systems.",
+    location: "São Paulo, Brazil",
     email: "murilomoura2005@gmail.com",
     github: "https://github.com/badmuriss",
     linkedin: "https://www.linkedin.com/in/murilooo/"
   },
   skills: [
     { name: "Java", category: "language" },
-    { name: "Spring Boot", category: "framework" },
-    { name: "TypeScript", category: "language" },
     { name: "JavaScript", category: "language" },
+    { name: "C#", category: "language" },
+    { name: "HTML", category: "language" },
+    { name: "CSS", category: "language" },
+    { name: "Spring Boot", category: "framework" },
+    { name: "Hibernate", category: "framework" },
     { name: "React", category: "framework" },
     { name: "Angular", category: "framework" },
-    { name: "Docker", category: "tool" },
+    { name: "Vue.js", category: "framework" },
+    { name: ".NET", category: "framework" },
+    { name: "jQuery", category: "framework" },
     { name: "SQL", category: "database" },
     { name: "PostgreSQL", category: "database" },
-    { name: "Azure AD", category: "cloud" },
-    { name: "Azure Key Vault", category: "cloud" },
-    { name: "Flutter", category: "framework" },
-    { name: "Dart", category: "language" },
-    { name: "i18n", category: "tool" },
-    { name: "l10n", category: "tool" },
-    { name: "MongoDB", category: "database" }
+    { name: "SQL Server", category: "database" },
+    { name: "MongoDB", category: "database" },
+    { name: "Azure", category: "cloud" },
+    { name: "Azure Logic Apps", category: "cloud" },
+    { name: "Azure Entra ID", category: "cloud" },
+    { name: "Docker", category: "tool" },
+    { name: "PowerShell", category: "tool" },
+    { name: "Maven", category: "tool" },
+    { name: "Gradle", category: "tool" }
   ],
   experience: [
     {
       company: "Globant",
-      role: "Full-Stack Developer",
-      period: "2023 - Present",
-      location: "Remote",
+      role: "Software Developer, Jr",
+      period: "Dec. 2024 – Present",
+      location: "São Paulo, Brazil",
+      linkedinUrl: "https://www.linkedin.com/company/globant",
       achievements: [
-        "Developed scalable microservices using Java and Spring Boot",
-        "Built responsive web applications with React and Angular",
-        "Implemented cloud solutions on Azure with secure authentication"
+        "Supported CAP Platform, a comprehensive workflow management solution, serving clients across multiple industries",
+        "Automated 100+ customer workflows on the CAP Platform using Azure Logic Apps and custom C# & PowerShell Azure Entra ID connectors, reducing manual processing time by 60% and cutting error rates by 45%",
+        "Enforced business-rule validation in every process flow, improving data integrity and compliance across 10+ enterprise clients",
+        "Maintained a 97% customer satisfaction (CSAT) score by delivering rapid incident resolution, thorough root-cause analysis, and proactive performance tuning"
       ]
     },
     {
       company: "Iteris",
-      role: "Software Developer",
-      period: "2022 - 2023",
-      location: "Brazil",
+      role: "Software Developer, Jr",
+      period: "Aug. 2024 – Dec. 2024",
+      location: "São Paulo, Brazil",
+      linkedinUrl: "https://www.linkedin.com/company/iteris-consultoria-e-software/",
       achievements: [
-        "Created enterprise applications with modern frameworks",
-        "Collaborated on international localization projects",
-        "Optimized database performance and implemented CI/CD pipelines"
+        "Developer at R&D PromptBot, an AI-prompt management platform that streamlines the creation and reuse of prompts for generative AI workflows",
+        "Ensured reliable AI outputs by standardizing prompt templates and validation rules",
+        "Developed Java services with Spring Boot, Gradle, and PostgreSQL to manage templates and inject user data",
+        "Hardened application security with Spring Security and Azure Entra ID RBAC, eliminating unauthorized-access incidents",
+        "Partnered with front-end developers to refine the React interface, making prompt setup more intuitive"
       ]
     }
   ],
@@ -58,7 +70,7 @@ export const portfolioData: PortfolioData = {
       name: "Alcoolize",
       description: "Multi-language drinking game built in Flutter.",
       tags: ["Flutter", "Dart", "i18n", "l10n"],
-      year: 2024,
+      year: 2025,
       githubUrl: "https://github.com/badmuriss/alcoolize",
       liveUrl: "https://alcoolize.outis.com.br/"
     },
@@ -73,9 +85,26 @@ export const portfolioData: PortfolioData = {
     {
       name: "PWVault",
       description: "Password manager backed by Azure Key Vault.",
-      tags: ["Java", "Spring Boot", "Angular", "Azure AD", "Azure Key Vault"],
+      tags: ["Java", "Spring Boot", "Angular", "Azure Entra ID", "Azure Key Vault"],
       year: 2024,
       githubUrl: "https://github.com/badmuriss/pwvault"
+    },
+    {
+      name: "64ers",
+      description: "Simple Vue.js application for encoding files to Base64 and decoding Base64 strings back into downloadable files with automatic mime detection.",
+      tags: ["Vue.js", "JavaScript", "Base64"],
+      year: 2024,
+      githubUrl: "https://github.com/badmuriss/64ers",
+      liveUrl: "https://64ers.outis.com.br/"
+    }
+  ],
+  education: [
+    {
+      institution: "FIAP",
+      degree: "BS, Information Systems",
+      period: "Feb. 2023 – Present", 
+      location: "São Paulo, Brazil",
+      status: "In Progress"
     }
   ]
 };

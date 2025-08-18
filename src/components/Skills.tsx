@@ -15,7 +15,7 @@ const categoryIcons = {
 
 const categoryColors = {
   language: 'bg-primary/10 text-primary border-primary/20',
-  framework: 'bg-accent/10 text-accent-foreground border-accent/20',
+  framework: 'bg-accent/10 text-accent border-accent/20',
   tool: 'bg-success/10 text-success border-success/20',
   database: 'bg-warning/10 text-warning border-warning/20',
   cloud: 'bg-destructive/10 text-destructive border-destructive/20'
@@ -48,8 +48,8 @@ export default function Skills({ language }: SkillsProps) {
                   <span className="text-2xl mr-3">
                     {categoryIcons[category as keyof typeof categoryIcons]}
                   </span>
-                  <h3 className="text-xl font-semibold capitalize text-foreground">
-                    {category}s
+                  <h3 className="text-xl font-semibold text-foreground">
+                    {t.skills.categories[category as keyof typeof t.skills.categories]}
                   </h3>
                 </div>
                 

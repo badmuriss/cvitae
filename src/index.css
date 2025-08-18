@@ -16,13 +16,13 @@
     --card-foreground: 240 10% 15%;
     --card-border: 0 0% 100%;
 
-    /* Lighter Purple palette for better contrast */
-    --primary: 262 67% 58%; /* Lighter purple */
-    --primary-hover: 262 67% 65%; /* Even lighter on hover */
+    /* Deep Purple palette for better contrast */
+    --primary: 270 85% 45%; /* Deep purple */
+    --primary-hover: 270 75% 65%; /* Lighter on hover */
     --primary-foreground: 0 0% 100%;
 
-    /* Lighter Accent purple */
-    --accent: 262 85% 70%; /* Lighter accent */
+    /* Vibrant Purple accent */
+    --accent: 280 85% 65%; /* Vibrant purple accent */
     --accent-foreground: 240 10% 15%;
 
     /* Status colors */
@@ -71,12 +71,12 @@
     --card-foreground: 0 0% 98%;
     --card-border: 0 0% 100%;
 
-    /* Lighter Purple palette (same in dark) */
-    --primary: 262 67% 58%;
-    --primary-hover: 262 67% 65%;
+    /* Deep Purple palette for dark theme */
+    --primary: 270 95% 45%; /* Brighter purple in dark */
+    --primary-hover: 270 75% 70%;
     --primary-foreground: 0 0% 100%;
 
-    --accent: 262 85% 70%;
+    --accent: 280 85% 65%; /* Brighter accent in dark */
     --accent-foreground: 0 0% 100%;
 
     --success: 158 73% 43%;
@@ -118,30 +118,54 @@
 }
 
 @layer utilities {
-  /* Glassmorphism utilities */
+  /* Modern Glassmorphism utilities with reflective shine */
   .glass {
-    background: hsl(var(--card) / 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid hsl(var(--card-border) / 0.2);
+    background: linear-gradient(135deg, hsl(var(--card) / 0.9), hsl(var(--card) / 0.7));
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid hsl(var(--primary) / 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.1), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .glass:hover::before {
+    left: 100%;
   }
 
   .glass-nav {
-    background: hsl(var(--card) / 0.9);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid hsl(var(--card-border) / 0.2);
+    background: linear-gradient(135deg, hsl(var(--card) / 0.95), hsl(var(--card) / 0.85));
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-bottom: 1px solid hsl(var(--primary) / 0.2);
+    box-shadow: 0 4px 24px hsl(var(--primary) / 0.1);
   }
 
   .glass-card {
     @apply glass rounded-2xl;
-    box-shadow: 0 8px 32px hsl(var(--primary) / 0.1);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+      0 8px 32px hsl(var(--primary) / 0.15),
+      0 2px 8px hsl(var(--primary) / 0.1),
+      inset 0 1px 0 hsl(var(--primary) / 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .glass-card:hover {
-    transform: translateY(-2px) scale(1.01);
-    box-shadow: 0 20px 40px hsl(var(--primary) / 0.15);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 
+      0 25px 50px hsl(var(--primary) / 0.2),
+      0 8px 16px hsl(var(--primary) / 0.15),
+      inset 0 1px 0 hsl(var(--primary) / 0.2);
   }
 
   .gradient-border {

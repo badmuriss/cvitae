@@ -20,11 +20,6 @@ export default function Footer({ language }: FooterProps) {
             <p className="text-muted-foreground text-sm">
               {t.footer.copyright}
             </p>
-            <p className="text-muted-foreground text-xs mt-1 flex items-center">
-              {t.footer.builtWith}
-              <Heart className="h-3 w-3 mx-1 text-red-500" />
-              and Lovable
-            </p>
           </div>
 
           <div className="flex space-x-6 text-sm">
