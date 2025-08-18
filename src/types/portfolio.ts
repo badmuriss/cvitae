@@ -29,6 +29,12 @@ export interface Education {
   status: string;
 }
 
+export interface Language {
+  name: string;
+  level: string;
+  proficiency: 'native' | 'fluent' | 'advanced' | 'intermediate' | 'basic';
+}
+
 export interface PortfolioData {
   personal: {
     name: string;
@@ -44,4 +50,5 @@ export interface PortfolioData {
   experience: Experience[];
   projects: Project[];
   education: Education[];
+  languages: Language[];
 }

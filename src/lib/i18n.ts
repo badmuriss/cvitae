@@ -2,14 +2,15 @@ export const translations = {
   en: {
     personal: {
       role: "Software Developer",
-      tagline: "Automating enterprise workflows and building full-stack applications",
-      bio: "Software developer and Information Systems student at FIAP with proven success automating enterprise workflows and building full-stack applications. Expert in Java/Spring Boot, JavaScript/React, Azure Logic Apps and Docker. Delivered solutions that cut manual effort by 60% and sustained a 97% CSAT. Strong collaborator, adept at translating complex business requirements into secure, maintainable, high-performance systems."
+      tagline: "Building full-stack applications and having fun in the process",
+      bio: "Software developer and Information Systems student at FIAP passionate about building full-stack applications and having fun in the process. Expert in Java/Spring Boot, JavaScript/React, and modern development tools. I love turning ideas into reality through clean code and innovative solutions, always learning new technologies and enjoying every step of the development journey."
     },
     nav: {
       about: "About",
       skills: "Skills", 
       experience: "Experience",
       education: "Education",
+      languages: "Languages",
       projects: "Projects",
       contact: "Contact"
     },
@@ -112,6 +113,21 @@ export const translations = {
         status: "In Progress"
       }
     },
+    languages: {
+      title: "Languages",
+      levels: {
+        native: "Native",
+        fluent: "Fluent",
+        advanced: "Advanced", 
+        intermediate: "Intermediate",
+        basic: "Basic"
+      },
+      languageNames: {
+        portuguese: "Portuguese",
+        english: "English",
+        spanish: "Spanish"
+      }
+    },
     footer: {
       copyright: "© 2025 Murilo Moura. All rights reserved.",
       builtWith: "Built with React & TypeScript"
@@ -120,14 +136,15 @@ export const translations = {
   "pt-BR": {
     personal: {
       role: "Desenvolvedor de Software",
-      tagline: "Automatizando fluxos de trabalho empresariais e construindo aplicações full-stack",
-      bio: "Desenvolvedor de software e estudante de Sistemas de Informação na FIAP com sucesso comprovado na automação de fluxos de trabalho empresariais e construção de aplicações full-stack. Especialista em Java/Spring Boot, JavaScript/React, Azure Logic Apps e Docker. Entreguei soluções que reduziram o esforço manual em 60% e mantiveram 97% de CSAT. Forte colaborador, hábil em traduzir requisitos de negócios complexos em sistemas seguros, sustentáveis e de alta performance."
+      tagline: "Construindo aplicações full-stack e me divertindo no processo",
+      bio: "Desenvolvedor de software e estudante de Sistemas de Informação na FIAP apaixonado por construir aplicações full-stack e me divertir no processo. Especialista em Java/Spring Boot, JavaScript/React e ferramentas modernas de desenvolvimento. Adoro transformar ideias em realidade através de código limpo e soluções inovadoras, sempre aprendendo novas tecnologias e aproveitando cada etapa da jornada de desenvolvimento."
     },
     nav: {
       about: "Sobre",
       skills: "Habilidades",
       experience: "Experiência",
-      education: "Educação", 
+      education: "Educação",
+      languages: "Idiomas", 
       projects: "Projetos",
       contact: "Contato"
     },
@@ -228,6 +245,21 @@ export const translations = {
       fiap: {
         degree: "Bacharelado, Sistemas de Informação",
         status: "Em Andamento"
+      }
+    },
+    languages: {
+      title: "Idiomas",
+      levels: {
+        native: "Nativo",
+        fluent: "Fluente",
+        advanced: "Avançado",
+        intermediate: "Intermediário", 
+        basic: "Básico"
+      },
+      languageNames: {
+        portuguese: "Português",
+        english: "Inglês",
+        spanish: "Espanhol"
       }
     },
     footer: {

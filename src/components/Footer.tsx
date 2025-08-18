@@ -28,7 +28,6 @@ export default function Footer({ language }: FooterProps) {
               { key: 'skills', id: 'skills' },
               { key: 'experience', id: 'experience' },
               { key: 'projects', id: 'projects' },
-              { key: 'contact', id: 'contact' }
             ].map(({ key, id }) => (
               <button
                 key={key}

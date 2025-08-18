@@ -106,5 +106,22 @@ export const portfolioData: PortfolioData = {
       location: "São Paulo, Brazil",
       status: "In Progress"
     }
+  ],
+  languages: [
+    {
+      name: "Portuguese",
+      level: "Native",
+      proficiency: "native"
+    },
+    {
+      name: "English", 
+      level: "C2",
+      proficiency: "fluent"
+    },
+    {
+      name: "Spanish",
+      level: "B2", 
+      proficiency: "advanced"
+    }
   ]
 };

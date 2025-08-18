@@ -16,8 +16,17 @@ export default function Hero({ language }: HeroProps) {
   };
 
   const downloadCV = () => {
-    // This would trigger the CV download
-    console.log('Download CV clicked');
+    const link = document.createElement('a');
+    if (language === 'pt-BR') {
+      link.href = '/CV - Murilo - PTBR.pdf';
+      link.download = 'CV - Murilo Moura - PTBR.pdf';
+    } else {
+      link.href = '/CV - Murilo.pdf';
+      link.download = 'CV - Murilo Moura.pdf';
+    }
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -39,7 +48,7 @@ export default function Hero({ language }: HeroProps) {
             />
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold mb-3 md:mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             {personal.name}
           </h1>
           

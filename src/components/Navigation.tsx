@@ -68,6 +68,7 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
               { key: 'skills', id: 'skills' },
               { key: 'experience', id: 'experience' },
               { key: 'education', id: 'education' },
+              { key: 'languages', id: 'languages' },
               { key: 'projects', id: 'projects' }
             ].map(({ key, id }) => (
               <button
@@ -114,6 +115,7 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
               { key: 'skills', id: 'skills' },
               { key: 'experience', id: 'experience' },
               { key: 'education', id: 'education' },
+              { key: 'languages', id: 'languages' },
               { key: 'projects', id: 'projects' }
             ].map(({ key, id }) => (
               <button
