@@ -31,12 +31,12 @@ export default function Projects({ language }: ProjectsProps) {
   });
 
   const ProjectCard = ({ project }: { project: Project }) => (
-    <div className="glass-card p-6 group h-[500px]">
+    <div className="glass-card p-6 group">
       <div className="flex flex-col h-full">
         {/* Project image placeholder */}
         <div className="w-full h-48 mb-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center overflow-hidden">
           <img 
-            src={`https://via.placeholder.com/400x200/7C3AED/FFFFFF?text=${encodeURIComponent(project.name)}`}
+            src={`https://via.placeholder.com/400x200/3B0764/FFFFFF?text=${encodeURIComponent(project.name)}`}
             alt={`${project.name} preview`}
             className="w-full h-full object-cover"
           />
@@ -50,7 +50,7 @@ export default function Projects({ language }: ProjectsProps) {
           </span>
         </div>
       
-      <p className="text-foreground/80 mb-4 leading-relaxed flex-grow">
+      <p className="text-foreground/80 mb-4 leading-relaxed">
         {project.description}
       </p>
       
