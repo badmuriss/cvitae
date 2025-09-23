@@ -18,6 +18,8 @@ export default function Experience({ language }: ExperienceProps) {
     return {
       ...exp,
       role: translatedData?.role || exp.role,
+      period: translatedData?.period || exp.period,
+      location: translatedData?.location || exp.location,
       achievements: translatedData?.achievements || exp.achievements
     };
   };
@@ -75,11 +77,11 @@ export default function Experience({ language }: ExperienceProps) {
                       <div className="flex flex-wrap gap-4 mb-4 text-sm text-muted-foreground">
                         <div className="flex items-center">
                           <Calendar className="h-4 w-4 mr-1" />
-                          {exp.period}
+                          {translatedExp.period}
                         </div>
                         <div className="flex items-center">
                           <MapPin className="h-4 w-4 mr-1" />
-                          {exp.location}
+                          {translatedExp.location}
                         </div>
                       </div>
 

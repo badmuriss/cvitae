@@ -16,7 +16,7 @@ const proficiencyColors = {
 
 const proficiencyWidth = {
   native: 'w-full',
-  fluent: 'w-5/6',
+  fluent: 'w-full', // C2 level gets full width
   advanced: 'w-4/6',
   intermediate: 'w-3/6',
   basic: 'w-2/6'
@@ -61,7 +61,7 @@ export default function Languages({ language }: LanguagesProps) {
               return (
                 <div
                   key={index}
-                  className="glass-card p-6 group hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
+                  className="glass-subtle p-6 group hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 rounded-2xl"
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-transparent from-primary to-accent rounded-full flex items-center justify-center mr-4">
@@ -79,23 +79,25 @@ export default function Languages({ language }: LanguagesProps) {
                     </div>
                   </div>
 
-                  {/* Proficiency bar */}
-                  <div className="mt-4">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm text-muted-foreground">Proficiency</span>
-                      <span className="text-sm font-medium text-foreground">{lang.level}</span>
+                  {/* Proficiency bar - hidden for native languages */}
+                  {lang.proficiency !== 'native' && (
+                    <div className="mt-4">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-sm text-muted-foreground">Proficiency</span>
+                        <span className="text-sm font-medium text-foreground">{lang.level}</span>
+                      </div>
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div
+                          className={`h-2 bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ${
+                            proficiencyWidth[lang.proficiency]
+                          }`}
+                          style={{
+                            animationDelay: `${index * 0.2}s`
+                          }}
+                        />
+                      </div>
                     </div>
-                    <div className="w-full bg-muted rounded-full h-2">
-                      <div 
-                        className={`h-2 bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ${
-                          proficiencyWidth[lang.proficiency]
-                        }`}
-                        style={{
-                          animationDelay: `${index * 0.2}s`
-                        }}
-                      />
-                    </div>
-                  </div>
+                  )}
                 </div>
               );
             })}

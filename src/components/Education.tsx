@@ -18,6 +18,8 @@ export default function Education({ language }: EducationProps) {
     return {
       ...edu,
       degree: translatedData?.degree || edu.degree,
+      period: translatedData?.period || edu.period,
+      location: translatedData?.location || edu.location,
       status: translatedData?.status || edu.status
     };
   };
@@ -36,7 +38,7 @@ export default function Education({ language }: EducationProps) {
               return (
                 <div
                   key={index}
-                  className="glass-card p-8 group hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
+                  className="glass-subtle p-8 group hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 rounded-2xl"
                 >
                   <div className="flex items-start gap-6">
                     {/* Education icon */}
@@ -65,11 +67,11 @@ export default function Education({ language }: EducationProps) {
                       <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
                         <div className="flex items-center">
                           <Calendar className="h-4 w-4 mr-2" />
-                          {edu.period}
+                          {translatedEdu.period}
                         </div>
                         <div className="flex items-center">
                           <MapPin className="h-4 w-4 mr-2" />
-                          {edu.location}
+                          {translatedEdu.location}
                         </div>
                       </div>
                     </div>

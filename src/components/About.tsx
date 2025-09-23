@@ -1,5 +1,4 @@
 import { MapPin } from 'lucide-react';
-import { portfolioData } from '@/data/portfolio';
 import { translations, Language } from '@/lib/i18n';
 
 interface AboutProps {
@@ -8,7 +7,6 @@ interface AboutProps {
 
 export default function About({ language }: AboutProps) {
   const t = translations[language];
-  const { personal } = portfolioData;
 
   return (
     <section id="about" className="py-20">
@@ -26,7 +24,7 @@ export default function About({ language }: AboutProps) {
               
               <div className="flex items-center text-muted-foreground">
                 <MapPin className="h-5 w-5 mr-2" />
-                <span>{t.about.location}: {personal.location}</span>
+                <span>{t.about.location}: {t.personal.location}</span>
               </div>
             </div>
 
@@ -35,10 +33,9 @@ export default function About({ language }: AboutProps) {
                 <div>
                   <h3 className="text-xl font-semibold mb-3 text-primary">{t.about.quickFacts}</h3>
                   <ul className="space-y-2 text-foreground/80">
-                    <li>💻 {t.about.facts.codingStart}</li>
-                    <li>⚡ {t.about.facts.automation}</li>
-                    <li>🎯 {t.about.facts.satisfaction}</li>
-                    <li>🏠 {t.about.facts.selfHost}</li>
+                    <li>💻 {t.about.facts.computerLove}</li>
+                    <li>⌨️ {t.about.facts.codingStart}</li>
+                    <li>⚙️ {t.about.facts.techEnthusiast}</li>
                   </ul>
                 </div>
                 
@@ -46,7 +43,6 @@ export default function About({ language }: AboutProps) {
                   <h3 className="text-xl font-semibold mb-3 text-primary">{t.about.interests}</h3>
                   <ul className="space-y-2 text-foreground/80">
                     <li>🤖 {t.about.interestsList.aiMl}</li>
-                    <li>⚙️ {t.about.interestsList.techHobbyist}</li>
                     <li>🔄 {t.about.interestsList.workflowAutomation}</li>
                     <li>🐳 {t.about.interestsList.dockerizing}</li>
                   </ul>

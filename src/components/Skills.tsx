@@ -43,7 +43,7 @@ export default function Skills({ language }: SkillsProps) {
 
           <div className="grid gap-8">
             {Object.entries(groupedSkills).map(([category, categorySkills]) => (
-              <div key={category} className="glass-card p-6">
+              <div key={category} className="glass-subtle p-6 rounded-2xl">
                 <div className="flex items-center mb-4">
                   <span className="text-2xl mr-3">
                     {categoryIcons[category as keyof typeof categoryIcons]}

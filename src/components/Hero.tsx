@@ -77,7 +77,7 @@ export default function Hero({ language }: HeroProps) {
               onClick={downloadCV}
               className="group"
             >
-              <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+              <Download className="mr-2 h-4 w-4 transition-transform" />
               {t.hero.downloadCV}
             </Button>
           </div>

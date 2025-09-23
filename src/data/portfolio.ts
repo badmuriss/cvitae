@@ -5,7 +5,7 @@ export const portfolioData: PortfolioData = {
     name: "Murilo Moura",
     role: "Software Developer",
     tagline: "Automating enterprise workflows and building full-stack applications",
-    bio: "Software developer and Information Systems student at FIAP with proven success automating enterprise workflows and building full-stack applications. Expert in Java/Spring Boot, JavaScript/React, Azure Logic Apps and Docker. Delivered solutions that cut manual effort by 60% and sustained a 97% CSAT. Strong collaborator, adept at translating complex business requirements into secure, maintainable, high-performance systems.",
+    bio: "Software developer and Information Systems student at FIAP with proven success automating enterprise workflows and building full-stack applications. Proficient in Java/Spring Boot, JavaScript/React, Azure Logic Apps and Docker. Delivered solutions that cut manual effort by 60% and sustained a 97% CSAT. Strong collaborator, adept at translating complex business requirements into secure, maintainable, high-performance systems.",
     location: "São Paulo, Brazil",
     email: "murilomoura2005@gmail.com",
     github: "https://github.com/badmuriss",
@@ -15,15 +15,13 @@ export const portfolioData: PortfolioData = {
     { name: "Java", category: "language" },
     { name: "JavaScript", category: "language" },
     { name: "C#", category: "language" },
-    { name: "HTML", category: "language" },
-    { name: "CSS", category: "language" },
+    { name: "Python", category: "language" },
     { name: "Spring Boot", category: "framework" },
     { name: "Hibernate", category: "framework" },
     { name: "React", category: "framework" },
     { name: "Angular", category: "framework" },
     { name: "Vue.js", category: "framework" },
     { name: ".NET", category: "framework" },
-    { name: "jQuery", category: "framework" },
     { name: "SQL", category: "database" },
     { name: "PostgreSQL", category: "database" },
     { name: "SQL Server", category: "database" },
@@ -31,6 +29,7 @@ export const portfolioData: PortfolioData = {
     { name: "Azure", category: "cloud" },
     { name: "Azure Logic Apps", category: "cloud" },
     { name: "Azure Entra ID", category: "cloud" },
+    { name: "GCP", category: "cloud" },
     { name: "Docker", category: "tool" },
     { name: "PowerShell", category: "tool" },
     { name: "Maven", category: "tool" },
@@ -45,7 +44,7 @@ export const portfolioData: PortfolioData = {
       linkedinUrl: "https://www.linkedin.com/company/globant",
       achievements: [
         "Supported CAP Platform, a comprehensive workflow management solution, serving clients across multiple industries",
-        "Automated 100+ customer workflows on the CAP Platform using Azure Logic Apps and custom C# & PowerShell Azure Entra ID connectors, reducing manual processing time by 60% and cutting error rates by 45%",
+        "Architected comprehensive workflow automation solutions on the CAP Platform using Azure Logic Apps and custom C# & PowerShell Azure Entra ID connectors, reducing manual processing time by 60% and cutting error rates by 45%",
         "Enforced business-rule validation in every process flow, improving data integrity and compliance across 10+ enterprise clients",
         "Maintained a 97% customer satisfaction (CSAT) score by delivering rapid incident resolution, thorough root-cause analysis, and proactive performance tuning"
       ]
@@ -83,6 +82,13 @@ export const portfolioData: PortfolioData = {
       liveUrl: "https://quikpad.cc/"
     },
     {
+      name: "CSFloat MCP",
+      description: "MCP server for searching CS2 skins on CSFloat marketplace.",
+      tags: ["Python", "MCP", "AI"],
+      year: 2025,
+      githubUrl: "https://github.com/badmuriss/csfloat-mcp"
+    },
+    {
       name: "PWVault",
       description: "Password manager backed by Azure Key Vault.",
       tags: ["Java", "Spring Boot", "Angular", "Azure Entra ID", "Azure Key Vault"],
@@ -102,7 +108,7 @@ export const portfolioData: PortfolioData = {
     {
       institution: "FIAP",
       degree: "BS, Information Systems",
-      period: "Feb. 2023 – Present", 
+      period: "Feb. 2023 – Dec, 2026", 
       location: "São Paulo, Brazil",
       status: "In Progress"
     }
@@ -114,7 +120,7 @@ export const portfolioData: PortfolioData = {
       proficiency: "native"
     },
     {
-      name: "English", 
+      name: "English",
       level: "C2",
       proficiency: "fluent"
     },

@@ -35,7 +35,7 @@ export default function Projects({ language }: ProjectsProps) {
     const translatedDescription = t.projects.list[projectKey as keyof typeof t.projects.list]?.description || project.description;
     
     return (
-    <div className="glass-card p-6 group h-[500px]">
+    <div className="glass-subtle p-6 group h-[500px] rounded-2xl">
       <div className="flex flex-col h-full">
         {/* Project image placeholder */}
         <div className="w-full h-48 mb-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center overflow-hidden">
@@ -111,7 +111,7 @@ export default function Projects({ language }: ProjectsProps) {
           </h2>
 
           {/* Filters */}
-          <div className="glass-card p-6 mb-12">
+          <div className="glass-subtle p-6 mb-12 rounded-2xl">
             <div className="grid md:grid-cols-2 gap-4">
               {/* Search */}
               <div className="relative">
@@ -120,7 +120,7 @@ export default function Projects({ language }: ProjectsProps) {
                   placeholder={t.projects.searchPlaceholder}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 glass"
+                  className="pl-10 glass-subtle rounded-xl"
                 />
               </div>
 
@@ -130,7 +130,7 @@ export default function Projects({ language }: ProjectsProps) {
                 <select
                   value={selectedTech}
                   onChange={(e) => setSelectedTech(e.target.value)}
-                  className="flex-1 h-10 px-3 rounded-xl glass border border-border bg-transparent text-foreground focus:ring-2 focus:ring-primary"
+                  className="flex-1 h-10 px-3 rounded-xl glass-subtle border border-border bg-transparent text-foreground focus:ring-2 focus:ring-primary"
                 >
                   <option value="">{t.projects.allTechnologies}</option>
                   {allTechnologies.map(tech => (
