@@ -82,6 +82,14 @@ export const portfolioData: PortfolioData = {
       liveUrl: "https://quikpad.cc/"
     },
     {
+      name: "naniiicu",
+      description: "Modern URL shortener and link hub creator with QR code generation and analytics.",
+      tags: ["React", "TypeScript", "Express", "MongoDB", "Docker"],
+      year: 2025,
+      githubUrl: "https://github.com/badmuriss/nanii.icu",
+      liveUrl: "https://nanii.icu"
+    },
+    {
       name: "CSFloat MCP",
       description: "MCP server for searching CS2 skins on CSFloat marketplace.",
       tags: ["Python", "MCP", "AI"],
