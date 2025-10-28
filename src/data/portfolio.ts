@@ -82,8 +82,8 @@ export const portfolioData: PortfolioData = {
       liveUrl: "https://quikpad.cc/"
     },
     {
-      name: "naniiicu",
-      description: "Modern URL shortener and link hub creator with QR code generation and analytics.",
+      name: "nanii.icu",
+      description: "Modern URL shortener and link hub creator with QR code generation.",
       tags: ["React", "TypeScript", "Express", "MongoDB", "Docker"],
       year: 2025,
       githubUrl: "https://github.com/badmuriss/nanii.icu",

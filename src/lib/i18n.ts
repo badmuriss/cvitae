@@ -96,6 +96,9 @@ export const translations = {
         quikpad: {
           description: "Fast formatted notes and code snippets."
         },
+        "nanii.icu": {
+          description: "Modern URL shortener and link hub creator with QR code generation."
+        },
         pwvault: {
           description: "Password manager backed by Azure Key Vault."
         },
@@ -237,6 +240,9 @@ export const translations = {
         },
         quikpad: {
           description: "Notas formatadas rápidas e snippets de código."
+        },
+        "nanii.icu": {
+          description: "Encurtador de URLs moderno e criador de hub de links com geração de código QR."
         },
         pwvault: {
           description: "Gerenciador de senhas com Azure Key Vault."
