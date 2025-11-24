@@ -38,11 +38,11 @@ export default function Projects({ language }: ProjectsProps) {
     <div className="glass-subtle p-6 group h-[500px] rounded-2xl">
       <div className="flex flex-col h-full">
         {/* Project image placeholder */}
-        <div className="w-full h-48 mb-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center overflow-hidden">
-          <img 
+        <div className="w-full h-48 mb-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl overflow-hidden flex-shrink-0">
+          <img
             src={`/projects/${projectKey}.png`}
             alt={`${project.name} preview`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
         </div>
         <div className="flex justify-between items-start mb-4">

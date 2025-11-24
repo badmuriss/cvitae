@@ -39,32 +39,39 @@ export const portfolioData: PortfolioData = {
     {
       company: "Globant",
       role: "Software Developer, Jr",
-      period: "Dec. 2024 – Present",
-      location: "São Paulo, Brazil",
       linkedinUrl: "https://www.linkedin.com/company/globant",
+      period: "May. 2025 - Present",
+      location: "São Paulo, Brazil",
       achievements: [
-        "Supported CAP Platform, a comprehensive workflow management solution, serving clients across multiple industries",
-        "Architected comprehensive workflow automation solutions on the CAP Platform using Azure Logic Apps and custom C# & PowerShell Azure Entra ID connectors, reducing manual processing time by 60% and cutting error rates by 45%",
-        "Enforced business-rule validation in every process flow, improving data integrity and compliance across 10+ enterprise clients",
-        "Maintained a 97% customer satisfaction (CSAT) score by delivering rapid incident resolution, thorough root-cause analysis, and proactive performance tuning"
+        "Worked as a full-stack developer on the CAP Platform, an Enterprise automation solution, performing maintenance and feature implementation in the platform's core, applying Design Patterns (Repository, Strategy) to ensure scalability, in addition to delivering customized workflows for over 10 corporate clients, integrating systems such as SAP, Protheus, Azure AD, and Google Workspace",
+        "Developed customized connectors in C# and REST APIs, worked with operation queues and Job scheduling for task automation, in addition to performing maintenance and support for the transactional notification system via AWS SES",
+        "Implemented complex integration solutions using Azure Logic Apps and customized scripts, achieving a 60% reduction in manual processing time and a 45% reduction in the error rate through rigorous business rule validation and exception handling",
+        "Maintained 97% CSAT scores through agile incident resolution and proactive performance adjustments, using CI/CD pipelines (Azure DevOps), ensuring code quality with SOLID principles and implementing observability practices (structured logging and audit trails)"
       ]
     },
     {
       company: "Iteris",
       role: "Software Developer, Jr",
-      period: "Aug. 2024 – Dec. 2024",
-      location: "São Paulo, Brazil",
       linkedinUrl: "https://www.linkedin.com/company/iteris-consultoria-e-software/",
+      period: "Aug. 2024 - May. 2025",
+      location: "São Paulo, Brazil",
       achievements: [
-        "Developer at R&D PromptBot, an AI-prompt management platform that streamlines the creation and reuse of prompts for generative AI workflows",
-        "Ensured reliable AI outputs by standardizing prompt templates and validation rules",
-        "Developed Java services with Spring Boot, Gradle, and PostgreSQL to manage templates and inject user data",
-        "Hardened application security with Spring Security and Azure Entra ID RBAC, eliminating unauthorized-access incidents",
-        "Partnered with front-end developers to refine the React interface, making prompt setup more intuitive"
+        "Worked on the R&D team developing PromptBot, a Generative AI orchestration platform, building robust services in Java (Spring Boot) with Gradle and PostgreSQL, implementing secure access control via OAuth and Azure AD, in addition to managing dynamic data injection into templates.",
+        "Integrated the solution with Azure OpenAI, implementing context validation and input sanitization rules to ensure the consistency and security of AI generated responses",
+        "Implemented application containerization using Docker and configured CI/CD pipelines in Azure DevOps for automated deploys, also collaborated on frontend optimization in React, improving the tool's usability for end-users",
+        "HEnsured system stability by applying SOLID principles and creating a comprehensive Unit and Integration Testing strategy (increasing code coverage), in addition to implementing a template versioning system for change control"
       ]
     }
   ],
   projects: [
+    {
+      name: "SOBUB AI",
+      description: "Silence Occasionally Broken Up By AI - context-aware meme soundboard triggered by conversation analysis.",
+      tags: ["Python", "FastAPI", "React", "Whisper", "Docker", "AI"],
+      year: 2025,
+      githubUrl: "https://github.com/badmuriss/sobub-ai",
+      liveUrl: undefined
+    },
     {
       name: "Alcoolize",
       description: "Multi-language drinking game built in Flutter.",
