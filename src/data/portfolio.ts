@@ -69,15 +69,13 @@ export const portfolioData: PortfolioData = {
       description: "Silence Occasionally Broken Up By AI - context-aware meme soundboard triggered by conversation analysis.",
       tags: ["Python", "FastAPI", "React", "Whisper", "Docker", "AI"],
       year: 2025,
-      githubUrl: "https://github.com/badmuriss/sobub-ai",
-      liveUrl: undefined
+      githubUrl: "https://github.com/badmuriss/sobub-ai"
     },
     {
       name: "Alcoolize",
       description: "Multi-language drinking game built in Flutter.",
       tags: ["Flutter", "Dart", "i18n", "l10n"],
       year: 2025,
-      githubUrl: "https://github.com/badmuriss/alcoolize",
       liveUrl: "https://alcoolize.outis.com.br/"
     },
     {

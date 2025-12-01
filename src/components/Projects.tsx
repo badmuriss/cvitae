@@ -77,10 +77,12 @@ export default function Projects({ language }: ProjectsProps) {
             asChild
             className="group/btn"
           >
+            {project.githubUrl && (
             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-4 w-4 group-hover/btn:scale-110 transition-transform" />
               {t.projects.viewGithub}
             </a>
+            )}
           </Button>
           
           {project.liveUrl && (
